@@ -1,5 +1,5 @@
 bem_vindo = "  Bem vindo ao jogo de advinhação!  "
-fim_execucao = "        Fim da execucao          "
+fim_execucao = "          Fim do Jogo            "
 asterisco = "************************************"
 
 print(asterisco)
@@ -7,7 +7,6 @@ print(bem_vindo)
 print(asterisco)
 
 numero_secreto = 42
-
 
 nome = input("Digite o seu nome:")
 numero = int(input("Digite o seu número: "))
