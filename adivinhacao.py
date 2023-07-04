@@ -6,18 +6,22 @@ print(asterisco)
 print(bem_vindo)
 print(asterisco)
 
-numero_secreto = 42
+numero_secreto = 10
+loop = True
 
 nome = input("Digite o seu nome:")
-numero = int(input("Digite o seu número: "))
 
-print("Você digitou:", numero, sep=" ")
-if(numero_secreto == numero):
-    print("Tenho uma boa noticia", nome + ".", sep=" ",)
-    print("Você Acertou!!!")
-else:
-    print("Infelizmente você errou", nome + ".", sep=" ")
-    print("Você Errou!!!")
+while loop:
+    numero = int(input("Digite o seu número entre 0 a 10: "))
+    print("Você digitou:", numero, sep=" ")
+    if (numero_secreto == numero):
+        print("Tenho uma boa noticia", nome + ".", sep=" ", )
+        print("Você Acertou!!!")
+        loop = False
+    else:
+        print("Infelizmente você errou", nome + ".", sep=" ")
+        print("Você Errou!!!")
+        print("Tente novamente.")
 
 print(asterisco)
 print(fim_execucao)
