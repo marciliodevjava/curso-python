@@ -13,9 +13,11 @@ loop = True
 
 nome = input("Digite o seu nome: ")
 idade = input("Quantos anos você tem " + nome + "?")
+tentativas = 0;
 
 while loop:
     numero = int(input("Digite o seu número entre 0 a 50: "))
+    tentativas += 1
     acertou = numero_secreto == numero
     maior = numero > numero_secreto
     menor = numero < numero_secreto
@@ -23,6 +25,7 @@ while loop:
     if (acertou):
         print("Tenho uma boa noticia", nome + ".", sep=" ", )
         print("Você Acertou!!!")
+        print("Tetativas: ", tentativas, sep=" ")
         print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
         loop = False
     else:
