@@ -1,8 +1,8 @@
 import random
 
-bem_vindo = "    Bem vindo ao jogo de advinhação!    "
-fim_execucao = "            Fim do Jogo              "
-asterisco = "****************************************"
+bem_vindo = "     Bem vindo ao jogo de advinhação!     "
+fim_execucao = "             Fim do Jogo               "
+asterisco = "******************************************"
 
 print(asterisco)
 print(bem_vindo)
