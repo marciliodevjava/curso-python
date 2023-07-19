@@ -42,6 +42,7 @@ while loop:
             print("Tente novamente.")
             print(asterisco)
 
+
 print(asterisco)
 print(fim_execucao)
 print(asterisco)
