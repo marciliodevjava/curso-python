@@ -13,9 +13,10 @@ numero_secreto = random.randint(0, 50)
 nome = input("Digite o seu nome: ")
 idade = int(input("Digite a sua idade: "))
 tentativas = int(input("Quantas tentativas? "))
+rodada = 1
 
-while (tentativas > 0):
-    print("Tentativa nº:", tentativas, sep="")
+while (rodada <= tentativas):
+    print("Tentativa nº:", rodada, "de", tentativas, sep=" ")
     numero = int(input("Digite o seu número entre 0 a 50: "))
     acertou = numero_secreto == numero
     maior = numero > numero_secreto
@@ -25,7 +26,7 @@ while (tentativas > 0):
         print("Tenho uma boa noticia", nome + ".", sep=" ", )
         print("Você Acertou!!!")
         print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
-        tentativas = 0
+        rodada = tentativas + 1
     else:
         if maior:
             print(asterisco)
@@ -33,15 +34,14 @@ while (tentativas > 0):
             print("É um número inferior a esse numero:", numero, sep=" ")
             print("Tente novamente.")
             print(asterisco)
-            tentativas = tentativas - 1
+            rodada = rodada + 1
         elif menor:
             print(asterisco)
             print("Infelizmente você errou", nome + ".", sep=" ")
             print("É um número superior a esse numero:", numero, sep=" ")
             print("Tente novamente.")
             print(asterisco)
-            tentativas = tentativas - 1
-
+            rodada = rodada + 1
 
 print(asterisco)
 print(fim_execucao)
