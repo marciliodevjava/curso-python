@@ -30,7 +30,7 @@ for rodada in range(1, tentativas + 1):
     acertou = numero_secreto == numero
     maior = numero > numero_secreto
     menor = numero < numero_secreto
-    print(f"Você digitou: {numero}")
+    print("Você digitou: {}".format(numero))
     if (acertou):
         print(f"Tenho uma boa noticia {nome}.")
         print("Você Acertou!!!")
