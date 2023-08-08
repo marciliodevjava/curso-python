@@ -24,7 +24,7 @@ while (rodada <= tentativas):
     menor = numero < numero_secreto
     print(f"Você digitou: {numero}")
     if (acertou):
-        print("Tenho uma boa noticia", nome + ".", sep=" ", )
+        print(f"Tenho uma boa noticia {nome}.")
         print("Você Acertou!!!")
         print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
         rodada = tentativas + 1
