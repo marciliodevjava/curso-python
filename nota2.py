@@ -18,6 +18,15 @@ for rodada in range(1, tentativas + 1):
     # String interpolation
     print("Tentativa nº:{} de {}".format(rodada, tentativas))
     numero = int(input("Digite o seu número entre 0 a 50: "))
+
+    if (numero <= 0):
+        print("Você deve digita um número maior que 0")
+        continue
+    else:
+        if (numero >= 50):
+            print("Você deve digita um número menor que 50")
+            continue
+
     acertou = numero_secreto == numero
     maior = numero > numero_secreto
     menor = numero < numero_secreto
