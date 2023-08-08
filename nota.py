@@ -16,12 +16,13 @@ tentativas = int(input("Quantas tentativas? "))
 rodada = 1
 
 while (rodada <= tentativas):
-    print("Tentativa nº:", rodada, "de", tentativas, sep=" ")
+    # String interpolation
+    print("Tentativa nº:{} de {}".format(rodada, tentativas))
     numero = int(input("Digite o seu número entre 0 a 50: "))
     acertou = numero_secreto == numero
     maior = numero > numero_secreto
     menor = numero < numero_secreto
-    print("Você digitou:", numero, sep=" ")
+    print(f"Você digitou: {numero}")
     if (acertou):
         print("Tenho uma boa noticia", nome + ".", sep=" ", )
         print("Você Acertou!!!")
