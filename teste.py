@@ -24,3 +24,8 @@ print("Data {:02d}/{:02d}/{:4d}".format(1, 5, 2023))
 print("Data {:02d}/{:02d}/{:4d}".format(11, 12, 2023))
 print("Data {:02d}/{:02d}/{:4d}".format(9, 8, 2023))
 print()
+# Nome
+nome = 'Matheus'
+print(f'Meu nome é {nome}')
+print(f'Meu nome é {nome.lower()}')
+print(f'Meu nome é {nome.upper()}')
