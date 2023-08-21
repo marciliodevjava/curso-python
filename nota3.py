@@ -10,7 +10,7 @@ print(asterisco)
 
 numero_secreto = random.randint(0, 50)
 
-nome = input("Digite o seu nome: \n")
+nome = input("Digite o seu nome: \n"), ""
 idade = int(input("Digite a sua idade: \n"))
 tentativas = int(input("Quantas tentativas? \n"))
 print("Qual nível de dificuldade")
