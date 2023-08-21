@@ -29,10 +29,10 @@ pontos = tentativas
 if dificuldade == 1:
     numero_secreto = random.randint(numero_facil_inicial, numero_facil_final)
     final = numero_facil_final
-elif (dificuldade == 2):
+elif dificuldade == 2:
     numero_secreto = random.randint(numero_facil_inicial, numero_medio_final)
     final = numero_medio_final
-elif (dificuldade == 3):
+elif dificuldade == 3:
     numero_secreto = random.randint(numero_facil_inicial, numero_difil_final)
     final = numero_difil_final
 else:
@@ -45,12 +45,12 @@ for rodada in range(1, tentativas + 1):
     print("Tentativa nº:{} de {}".format(rodada, tentativas))
     numero = int(input("Digite o seu número entre {} a {}: ".format(inicial, final)))
 
-    if (numero <= 0):
+    if numero <= 0:
         print("Você deve digita um número maior que 0")
         pontos = pontos - 1
         continue
     else:
-        if (numero >= 50):
+        if numero >= 50:
             print("Você deve digita um número menor que 50")
             pontos = pontos - 1
             continue
