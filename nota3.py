@@ -24,6 +24,8 @@ numero_difil_final = 50
 inicial = numero_facil_inicial
 final = 10
 
+pontos = tentativas
+
 if dificuldade == 1:
     numero_secreto = random.randint(numero_facil_inicial, numero_facil_final)
     final = numero_facil_final
@@ -38,16 +40,19 @@ else:
     final = numero_facil_final
 
 for rodada in range(1, tentativas + 1):
+
     # String interpolation
     print("Tentativa nº:{} de {}".format(rodada, tentativas))
     numero = int(input("Digite o seu número entre {} a {}: ".format(inicial, final)))
 
     if (numero <= 0):
         print("Você deve digita um número maior que 0")
+        pontos = pontos - 1
         continue
     else:
         if (numero >= 50):
             print("Você deve digita um número menor que 50")
+            pontos = pontos - 1
             continue
 
     acertou = numero_secreto == numero
@@ -58,6 +63,7 @@ for rodada in range(1, tentativas + 1):
         print(f"Tenho uma boa noticia {nome}.")
         print("Você Acertou!!!")
         print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
+        print("Você fez {} Pontos de {} Pontos".format(pontos, tentativas))
         break
     else:
         if maior:
@@ -65,12 +71,14 @@ for rodada in range(1, tentativas + 1):
             print("Infelizmente você errou", nome + ".", sep=" ")
             print("É um número inferior a esse numero:", numero, sep=" ")
             print("Tente novamente.")
+            pontos = pontos - 1
             print(asterisco)
         elif menor:
             print(asterisco)
             print("Infelizmente você errou", nome + ".", sep=" ")
             print("É um número superior a esse numero:", numero, sep=" ")
             print("Tente novamente.")
+            pontos = pontos - 1
             print(asterisco)
 
 print(asterisco)
