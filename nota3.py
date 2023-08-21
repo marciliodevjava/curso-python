@@ -10,7 +10,7 @@ print(asterisco)
 
 numero_secreto = random.randint(0, 50)
 
-nome = input("Digite o seu nome: \n"), ""
+nome = input("Digite o seu nome: \n")
 idade = int(input("Digite a sua idade: \n"))
 tentativas = int(input("Quantas tentativas? \n"))
 print("Qual nível de dificuldade")
@@ -59,7 +59,7 @@ for rodada in range(1, tentativas + 1):
     maior = numero > numero_secreto
     menor = numero < numero_secreto
     print("Você digitou: {}".format(numero))
-    if (acertou):
+    if acertou:
         print(f"Tenho uma boa noticia {nome}.")
         print("Você Acertou!!!")
         print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
