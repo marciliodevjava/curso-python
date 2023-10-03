@@ -1,5 +1,6 @@
 import random
 
+
 def jogar():
     bem_vindo = "     Bem vindo ao jogo de nota!     "
     fim_execucao = "             Fim do Jogo               "
@@ -54,3 +55,7 @@ def jogar():
     print(asterisco)
     print(fim_execucao)
     print(asterisco)
+
+
+if (__name__ == "__main__"):
+    jogar()
