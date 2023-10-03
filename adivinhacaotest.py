@@ -1,6 +1,6 @@
 import random
 
-bem_vindo = "     Bem vindo ao jogo de nota!     "
+bem_vindo = "     Bem vindo ao jogo de advinhação!     "
 fim_execucao = "             Fim do Jogo               "
 asterisco = "******************************************"
 
@@ -9,33 +9,25 @@ print(bem_vindo)
 print(asterisco)
 
 numero_secreto = random.randint(0, 50)
+loop = True
 
 nome = input("Digite o seu nome: ")
-idade = int(input("Digite a sua idade: "))
-tentativas = int(input("Quantas tentativas? "))
+idade = input("Quantos anos você tem " + nome + "?")
+tentativas = 0;
 
-for rodada in range(1, tentativas + 1):
-    # String interpolation
-    print("Tentativa nº:{} de {}".format(rodada, tentativas))
+while loop:
     numero = int(input("Digite o seu número entre 0 a 50: "))
-
-    if (numero <= 0):
-        print("Você deve digita um número maior que 0")
-        continue
-    else:
-        if (numero >= 50):
-            print("Você deve digita um número menor que 50")
-            continue
-
+    tentativas += 1
     acertou = numero_secreto == numero
     maior = numero > numero_secreto
     menor = numero < numero_secreto
-    print("Você digitou: {}".format(numero))
+    print("Você digitou:", numero, sep=" ")
     if (acertou):
-        print(f"Tenho uma boa noticia {nome}.")
+        print("Tenho uma boa noticia", nome + ".", sep=" ", )
         print("Você Acertou!!!")
+        print("Tetativas: ", tentativas, sep=" ")
         print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
-        break
+        loop = False
     else:
         if maior:
             print(asterisco)
@@ -49,6 +41,7 @@ for rodada in range(1, tentativas + 1):
             print("É um número superior a esse numero:", numero, sep=" ")
             print("Tente novamente.")
             print(asterisco)
+
 
 print(asterisco)
 print(fim_execucao)
