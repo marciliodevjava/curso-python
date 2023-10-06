@@ -7,7 +7,7 @@ def jogar():
 
     palavra_secreta = "pamonha"
 
-    print("Vamos brincar de FORCA, a palavra tem {} caractere.".format(palavra_secreta.__sizeof__()))
+    print("Vamos brincar de FORCA, a palavra tem {} caractere.".format(len(palavra_secreta)))
 
 
 if (__name__ == "__main__"):
