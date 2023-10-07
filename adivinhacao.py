@@ -21,11 +21,11 @@ def jogar():
         print("Tentativa nº:{} de {}".format(rodada, tentativas))
         numero = int(input("Digite o seu número entre 0 a 50: "))
 
-        if (numero <= 0):
+        if numero <= 0:
             print("Você deve digita um número maior que 0")
             continue
         else:
-            if (numero >= 50):
+            if numero >= 50:
                 print("Você deve digita um número menor que 50")
                 continue
 
@@ -33,7 +33,7 @@ def jogar():
         maior = numero > numero_secreto
         menor = numero < numero_secreto
         print("Você digitou: {}".format(numero))
-        if (acertou):
+        if acertou:
             print(f"Tenho uma boa noticia {nome}.")
             print("Você Acertou!!!")
             print("Você é muito inteligente e só tem", idade, "anos!", sep=" ")
