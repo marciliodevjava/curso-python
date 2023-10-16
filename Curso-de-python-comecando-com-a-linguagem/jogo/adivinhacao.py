@@ -2,7 +2,7 @@ import random
 
 
 def jogar():
-    bem_vindo = "     Bem vindo ao jogo de nota!     "
+    bem_vindo = "     Bem vindo ao jogo de ADVINHAÇÃO!     "
     fim_execucao = "             Fim do Jogo               "
     asterisco = "******************************************"
 
