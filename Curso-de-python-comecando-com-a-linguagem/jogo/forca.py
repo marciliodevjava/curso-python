@@ -76,7 +76,6 @@ def jogar():
                 acertou = True
                 break
 
-
         if palavra == palavra_secreta:
             acertou = True
             print(asterisco)
@@ -87,7 +86,8 @@ def jogar():
     print(fim_jogo)
     print(asterisco)
 
-def contadorSegredor(palavra:str):
+
+def contadorSegredor(palavra: str):
     tamanho = ""
     for contador in palavra:
         tamanho = tamanho + "_"
