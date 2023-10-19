@@ -1,5 +1,3 @@
-
-
 def jogar():
     asterisco = "******************************************"
     bem_vindo = "        Bem-vindo ao Jogo da Velha        "
