@@ -12,7 +12,7 @@ def jogar():
     enforcou = False
     acertou = False
 
-    #Enquanto não enforcou e não acertou
+    # Enquanto não enforcou e não acertou
     while not enforcou and not acertou:
         print("jogando.....")
         chute = input(str("Digite uma letra "))
@@ -31,6 +31,7 @@ def jogar():
 
     print("Fim do jogo")
 
-#Star da aplicação
+
+# Star da aplicação
 if (__name__ == "__main__"):
     jogar()
