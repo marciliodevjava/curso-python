@@ -29,6 +29,8 @@ def jogar():
                     print("_")
                     palavra = palavra + "_"
 
+        else:
+            print(f"A letra {chute}, não existe, tente novamente")
     print("Fim do jogo")
 
 
