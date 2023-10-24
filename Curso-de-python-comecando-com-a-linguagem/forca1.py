@@ -16,28 +16,12 @@ def jogar():
     while not enforcou and not acertou:
         print("jogando.....")
         chute = input(str("Digite uma letra "))
-        if palavra_secreta.__contains__(chute):
-            for letra in palavra_secreta:
-                if len(palavra) == len(palavra_secreta):
-                    for silaba in palavra:
-                        if silaba == "_":
-                            print("")
-
-                if palavra == "":
-                    if chute == letra:
-                        if len(palavra) > 1:
-                            palavra = palavra + letra
-                        print(chute)
-                        palavra = palavra + "_"
-                    else:
-                        if len(palavra) > 1:
-                            palavra = palavra + letra
-                        print("_")
-                        palavra = palavra + "_"
-
-        else:
-            print(f"A letra {chute}, não existe, tente novamente")
-    print("Fim do jogo")
+        chute = chute.strip()
+        index = 0
+        for letra in palavra_secreta:
+            if chute.upper() == letra.upper():
+                print("Encontrei a letra {} na posicao".format(chute, index))
+            index = index + 1
 
 
 # Star da aplicação
