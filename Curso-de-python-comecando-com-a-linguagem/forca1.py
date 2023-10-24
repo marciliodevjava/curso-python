@@ -18,16 +18,22 @@ def jogar():
         chute = input(str("Digite uma letra "))
         if palavra_secreta.__contains__(chute):
             for letra in palavra_secreta:
-                if chute == letra:
-                    if len(palavra) > 1:
-                        palavra = palavra + letra
-                    print(chute)
-                    palavra = palavra + "_"
-                else:
-                    if len(palavra) > 1:
-                        palavra = palavra + letra
-                    print("_")
-                    palavra = palavra + "_"
+                if len(palavra) == len(palavra_secreta):
+                    for silaba in palavra:
+                        if silaba == "_":
+                            print("")
+
+                if palavra == "":
+                    if chute == letra:
+                        if len(palavra) > 1:
+                            palavra = palavra + letra
+                        print(chute)
+                        palavra = palavra + "_"
+                    else:
+                        if len(palavra) > 1:
+                            palavra = palavra + letra
+                        print("_")
+                        palavra = palavra + "_"
 
         else:
             print(f"A letra {chute}, não existe, tente novamente")
