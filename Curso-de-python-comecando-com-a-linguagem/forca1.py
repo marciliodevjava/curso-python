@@ -4,6 +4,7 @@ def jogar():
     print("******************************************")
 
     palavra_secreta = "banana"
+    letras_acertadas = ["_","_","_","_","_","_"]
     tentativa = len(palavra_secreta)
     palavra = ""
 
