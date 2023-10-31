@@ -21,9 +21,11 @@ def jogar():
         index = 0
         for letra in palavra_secreta:
             if chute.upper() == letra.upper():
-                print("Encontrei a letra {} na posicao".format(chute, index))
+                letras_acertadas[index] = letra
+
             index = index + 1
 
+        print(letras_acertadas)
 
 # Star da aplicação
 if (__name__ == "__main__"):
