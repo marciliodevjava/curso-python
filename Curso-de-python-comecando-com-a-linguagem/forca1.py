@@ -4,7 +4,7 @@ def jogar():
     print("******************************************")
 
     palavra_secreta = "banana"
-    letras_acertadas = ["_","_","_","_","_","_"]
+    letras_acertadas = ["_", "_", "_", "_", "_", "_"]
     tentativa = len(palavra_secreta)
     palavra = ""
 
@@ -26,6 +26,12 @@ def jogar():
             index = index + 1
 
         print(letras_acertadas)
+        for i in letras_acertadas:
+            if palavra_secreta == palavra_completa:
+                acertou = True
+            else:
+                palavra_completa = ""
+
 
 # Star da aplicação
 if (__name__ == "__main__"):
