@@ -33,6 +33,7 @@ def jogar():
                 palavra_completa = ""
 
 
+
 # Star da aplicação
 if (__name__ == "__main__"):
     jogar()
