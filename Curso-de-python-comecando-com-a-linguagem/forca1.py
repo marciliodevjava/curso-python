@@ -23,9 +23,7 @@ def jogar():
         for letra in palavra_secreta:
             if chute.upper() == letra.upper():
                 letras_acertadas[index] = letra
-
             index = index + 1
-
         print(letras_acertadas)
         for i in letras_acertadas:
             if palavra_secreta == palavra_completa:
