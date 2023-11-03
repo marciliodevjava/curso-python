@@ -18,6 +18,7 @@ def jogar():
         print("jogando.....")
         chute = input(str("Digite uma letra "))
         chute = chute.strip()
+
         index = 0
         for letra in palavra_secreta:
             if chute.upper() == letra.upper():
