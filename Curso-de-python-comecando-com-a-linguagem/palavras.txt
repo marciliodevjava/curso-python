@@ -3,3 +3,7 @@ melancia
 abacate
 morango
 pera
+limao
+kaqui
+laranja
+jabuticaba
