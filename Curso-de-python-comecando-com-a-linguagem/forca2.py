@@ -1,9 +1,7 @@
 import random
 
 def jogar():
-    print("******************************************")
-    print("        Bem vindo ao jogo da Forca        ")
-    print("******************************************")
+    bem_vindo()
 
     list = selecionarPalavras()
 
@@ -53,9 +51,17 @@ def selecionarPalavras():
     arquivo.close()
     return list
 
-# Star da aplicação
-if (__name__ == "__main__"):
-    jogar()
+def bem_vindo():
+    print("******************************************")
+    print("        Bem vindo ao jogo da Forca        ")
+    print("******************************************")
+
+def fim_jogo():
     print("******************************************")
     print("                   FIM                    ")
     print("******************************************")
+
+# Star da aplicação
+if (__name__ == "__main__"):
+    jogar()
+    fim_jogo()
