@@ -17,16 +17,10 @@ def jogar():
 
     # Enquanto não enforcou e não acertou
     while not enforcou and not acertou:
-        print("jogando.....")
-        chute = input(str("Digite uma letra "))
-        chute = chute.strip()
+        chute = pede_chute()
 
         if chute in palavra_secreta:
-            index = 0
-            for letra in palavra_secreta:
-                if chute.upper() == letra.upper():
-                    letras_acertadas[index] = letra
-                index = index + 1
+            marcar_chute(chute, palavra_secreta, letras_acertadas)
         else:
             erros = erros + 1
 
@@ -50,6 +44,18 @@ def selecionar_palavras():
 
     arquivo.close()
     return list
+
+def pede_chute():
+    print("jogando.....")
+    chute = input(str("Digite uma letra "))
+    return chute.strip()
+
+def marcar_chute(chute, palavra_secreta, letras_acertadas):
+    index = 0
+    for letra in palavra_secreta:
+        if chute.upper() == letra.upper():
+            letras_acertadas[index] = letra
+        index = index + 1
 
 def bem_vindo():
     print("******************************************")
