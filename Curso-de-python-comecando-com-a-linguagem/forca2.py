@@ -26,14 +26,13 @@ def jogar():
 
         enforcou = erros == 6
         acertou = "_" not in letras_acertadas
-        print("Quantidade de ERROS: {}".format(erros))
-        print(letras_acertadas)
+        imprime_informacoes(letras_acertadas, erros)
 
     if acertou:
         imprime_mensagem_ganhador()
 
     else:
-        imprime_mensagem_perdedor()
+        imprime_mensagem_perdedor(palavra_secreta)
 
 def calcula_palavra(palavra_secreta):
     lista = []
@@ -63,12 +62,33 @@ def marcar_chute(chute, palavra_secreta, letras_acertadas):
             letras_acertadas[index] = letra
         index = index + 1
 
+def imprime_informacoes(letras_acertadas, erros):
+    print("Quantidade de ERROS: {}".format(erros))
+    print(letras_acertadas)
+
 def imprime_mensagem_ganhador():
     print("Parabéns você Ganhou!!!")
 
 
-def imprime_mensagem_perdedor():
+def imprime_mensagem_perdedor(palavra_secreta):
     print("Infelismente não foi dessa vez!!!")
+    print("A palavra era {}".format(palavra_secreta))
+    print("     _______________       ")
+    print("    /               \      ")
+    print("   /                 \     ")
+    print("/\/                   \/\  ")
+    print("\ |   XXXX     XXXX   | /  ")
+    print(" \|   XXXX     XXXX   |/   ")
+    print("  |   XXX       XXX   |    ")
+    print("  |                   |    ")
+    print("  \__      XXX      __/    ")
+    print("    |\     XXX     /|      ")
+    print("    | |           | |      ")
+    print("    | I I I I I I I |      ")
+    print("    |  I I I I I I  |      ")
+    print("    \_             _/      ")
+    print("      \_         _/        ")
+    print("        \_______/          ")
 
 def bem_vindo():
     print("******************************************")
