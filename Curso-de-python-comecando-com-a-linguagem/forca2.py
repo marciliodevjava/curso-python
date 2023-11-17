@@ -3,11 +3,11 @@ import random
 def jogar():
     bem_vindo()
 
-    list = selecionarPalavras()
+    list = selecionar_palavras()
 
     index1 = random.randrange(0, len(list))
     palavra_secreta = list[index1]
-    letras_acertadas = calculaPalavra(palavra_secreta)
+    letras_acertadas = calcula_palavra(palavra_secreta)
     tentativa = len(palavra_secreta)
     print("A palavra tem {} caractere ".format(len(palavra_secreta)))
 
@@ -35,13 +35,13 @@ def jogar():
         print("Quantidade de ERROS: {}".format(erros))
         print(letras_acertadas)
 
-def calculaPalavra(palavra_secreta):
+def calcula_palavra(palavra_secreta):
     lista = []
     for palavra in palavra_secreta:
         lista.append("_")
     return lista
 
-def selecionarPalavras():
+def selecionar_palavras():
     arquivo = open("palavras.txt", "r")
     list = []
     for linha in arquivo:
