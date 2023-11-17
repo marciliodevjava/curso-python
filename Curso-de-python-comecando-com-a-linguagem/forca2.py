@@ -29,6 +29,12 @@ def jogar():
         print("Quantidade de ERROS: {}".format(erros))
         print(letras_acertadas)
 
+    if acertou:
+        imprime_mensagem_ganhador()
+
+    else:
+        imprime_mensagem_perdedor()
+
 def calcula_palavra(palavra_secreta):
     lista = []
     for palavra in palavra_secreta:
@@ -56,6 +62,13 @@ def marcar_chute(chute, palavra_secreta, letras_acertadas):
         if chute.upper() == letra.upper():
             letras_acertadas[index] = letra
         index = index + 1
+
+def imprime_mensagem_ganhador():
+    print("Parabéns você Ganhou!!!")
+
+
+def imprime_mensagem_perdedor():
+    print("Infelismente não foi dessa vez!!!")
 
 def bem_vindo():
     print("******************************************")
