@@ -50,7 +50,7 @@ def selecionar_palavras():
     arquivo.close()
     return list
 
-def pede_chute():
+def  pede_chute():
     print("jogando.....")
     chute = input(str("Digite uma letra "))
     return chute.strip()
